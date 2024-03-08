@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#242424"
+    android:orientation="vertical"
+    tools:context=".VerifideActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="45dp"
+            android:src="@drawable/back_arow"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Phone Verification"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            tools:ignore="HardcodedText" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="28dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dp"
+            android:text="Enter 6 digit verification code send \nto your phone number"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+
+        <com.chaos.view.PinView
+            android:id="@+id/pinview"
+            style="@style/PinWidget.PinView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp"
+            android:cursorVisible="true"
+            android:gravity="center"
+            android:inputType="number"
+            android:itemBackground="#B0FFFFFF"
+            app:hideLineWhenFilled="false"
+            app:itemCount="6"
+            app:itemHeight="50dp"
+            app:itemRadius="10dp"
+            app:itemWidth="50dp">
+
+        </com.chaos.view.PinView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:text="Resnet Code"
+            android:textColor="#FE8723"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/completVerify_Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="300dp"
+            android:backgroundTint="#FE8723"
+            android:hint="Verifeid"
+            android:textColorHint="@color/white" />
+    </LinearLayout>
+</LinearLayout>

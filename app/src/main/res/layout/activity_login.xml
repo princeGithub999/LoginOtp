@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:layout_width="290dp"
+        android:layout_height="290dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/img_2">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="78dp"
+            android:gravity="center"
+            android:text="Login to your Account"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="40dp"
+            android:background="@drawable/button_desine">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="12dp"
+                android:text="Email"
+                android:textColor="@color/white"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:hint="Phone Number"
+                android:textColorHint="@color/black"
+
+                tools:ignore="HardcodedText" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/enterNumber_EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_text_desine"
+                android:hint="Enter Number"
+                android:paddingLeft="10dp"
+                android:textColorHint="@color/white"
+                tools:ignore="Autofill,HardcodedText,RtlHardcoded,RtlSymmetry"
+                android:textColor="@color/white"
+                android:inputType="number"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/sendOtp_Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:backgroundTint="#FE8723"
+                android:hint="Send OTP"
+                android:textColorHint="@color/white"
+                tools:ignore="HardcodedText" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Don't have account? "
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText" />
+                <TextView
+                    android:id="@+id/createAccount_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Create Account"
+                    android:textColor="#FE8723"
+                    android:textSize="12sp"
+                    android:layout_marginStart="2dp"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
