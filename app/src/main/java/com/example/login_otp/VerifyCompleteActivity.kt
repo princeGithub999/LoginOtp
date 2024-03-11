@@ -12,6 +12,6 @@ class VerifyCompleteActivity : AppCompatActivity() {
 
         Handler().postDelayed({
             startActivity(Intent(this,AllDitlesActivity::class.java))
-        },3000)
+        },2000)
     }
 }

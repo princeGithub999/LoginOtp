@@ -16,23 +16,17 @@ class VerifideActivity : AppCompatActivity() {
     private lateinit var otp: String
     private lateinit var number: String
     private lateinit var resendingToken: ForceResendingToken
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivityVerifideBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         otp = intent.getStringExtra("OTP").toString()
         number = intent.getStringExtra("number").toString()
         resendingToken = ((intent.getParcelableExtra("ResentToken") as? ForceResendingToken)!!)
-
         binding.completVerifyButton.setOnClickListener {
             verifyOtp()
         }
-
     }
-
     private fun verifyOtp() {
         val otpText = binding.pinview.text.toString()
         val phoneAuthCredential = PhoneAuthProvider.getCredential(otp, otpText)
@@ -40,7 +34,6 @@ class VerifideActivity : AppCompatActivity() {
             .addOnSuccessListener {
                 Toast.makeText(this, "Verify Success", Toast.LENGTH_SHORT).show()
                     startActivity(Intent(this, VerifyCompleteActivity::class.java))
-
                 finish()
             }
             .addOnFailureListener {

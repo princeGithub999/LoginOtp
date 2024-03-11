@@ -20,7 +20,7 @@ class SplaceScreenActivity : AppCompatActivity() {
 
         Handler().postDelayed({
             if (auth.currentUser != null) {
-                startActivity(Intent(this, AllDitlesActivity::class.java))
+                startActivity(Intent(this, HomeActivity::class.java))
             }else{
                 startActivity(Intent(this,LoginActivity::class.java))
             }
